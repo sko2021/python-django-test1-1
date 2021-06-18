@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def hello(request):
-    return HttpResponse("
+    return HttpResponse(
 <!DOCTYPE html>
 <html>
 <head>
@@ -812,6 +812,4 @@ if(document.getElementById(approvedNum).alt == "image of plus symbol"){
 	 <script src="https://gateway.usps.com/eAdmin/scripts/timeout/timeout.js"></script>
 </body>
 	</html>
-                        
-                        
-                        ")
+)
