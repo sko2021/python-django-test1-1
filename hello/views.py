@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def hello(request):
     return HttpResponse(
-<!DOCTYPE html>
+'<!DOCTYPE html>
 <html>
 <head>
 
@@ -115,8 +115,8 @@ if(document.getElementById(approvedNum).alt == "image of plus symbol"){
 											<img							
 											src="USPS-BusinessPartnerGateway.png"
 											class="img-fluid" tabindex="16"
-											title="Link to Business Customer Gateway's Home Page"
-											alt="Image for Business Customer Gateway's Home Page link"
+											title="Link to Business Customer Gateway Home Page"
+											alt="Image for Business Customer Gateway Home Page link"
 											height="20px" />
 										</a>
 									</div>
@@ -811,5 +811,5 @@ if(document.getElementById(approvedNum).alt == "image of plus symbol"){
 	 <script src="https://gateway.usps.com/eAdmin/scripts/bootstrap/bootstrap.min.js"></script>
 	 <script src="https://gateway.usps.com/eAdmin/scripts/timeout/timeout.js"></script>
 </body>
-	</html>
+	</html>'
 )
