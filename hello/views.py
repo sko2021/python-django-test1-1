@@ -3,6 +3,8 @@ from django.shortcuts import render
 from .models import UspsServices
 
 def hello(request):
+
+   #These objects will be created from Database
    service1 = UspsServices()
    service1.serviceName = "Freight Auction"
    service1.serviceDescription = "Suppliers have the ability to accept or decline transportation based on a set rate."
@@ -22,7 +24,7 @@ def hello(request):
    service3.id = 3
 
    service4 = UspsServices()
-   service4.serviceName = "Automated Forms (Surface Transportation Automated Forms)"
+   service4.serviceName = "Automated Forms"
    service4.serviceDescription = "Supplier has the ability to manage . Automated Forms (Surface Transportation Automated Forms) here"
    service4.accessFlag = False
    service4.id = 4
