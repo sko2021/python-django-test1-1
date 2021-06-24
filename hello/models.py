@@ -5,3 +5,6 @@ from django.db import models
 class UspsServices:
     id : int
     serviceName : str    
+    serviceDescription : str    
+    accessFlag : bool
+    
