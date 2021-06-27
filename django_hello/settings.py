@@ -11,9 +11,17 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def get_env_value(env_variable):
+    try:
+      	return os.environ[env_variable]
+    except KeyError:
+        error_msg = 'Set the Environment Variable' + env_variable
+        raise ImproperlyConfigured(error_msg)
 
 
 # Quick-start development settings - unsuitable for production
@@ -84,15 +92,14 @@ DATABASES = {
 """
 DATABASES = {
      'default': {
-         'ENGINE': 'sql_server.pyodbc',
-         'NAME': 'bpg-db',
-         'USER': 'fharrington',
-         'PASSWORD': 'Bpg2021!',
-         'HOST': 'bpg-db-server.database.windows.net',
-         'PORT': '1433',
+         'ENGINE': get_env_value('DB_ENGINE'),
+         'NAME': get_env_value('DB_NAME'),
+         'USER': get_env_value('DB_USER'),
+         'PASSWORD': get_env_value('DB_PASSWORD'),
+         'HOST': get_env_value('DB_HOST'),
+         'PORT': get_env_value('DB_PORT'),
          'OPTIONS': {
-             'driver': 'ODBC Driver 17 for SQL Server',
-             'MARS_Connection': 'True',
+             'driver': get_env_value('DB_DRIVER'),
          }
      }
  }
