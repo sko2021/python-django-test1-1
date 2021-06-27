@@ -82,6 +82,21 @@ DATABASES = {
     }    
 }
 """
+DATABASES = {
+     'default': {
+         'ENGINE': 'sql_server.pyodbc',
+         'NAME': 'bpg-db',
+         'USER': 'fharrington',
+         'PASSWORD': 'Bpg2021!',
+         'HOST': 'bpg-db-server.database.windows.net',
+         'PORT': '1433',
+         'OPTIONS': {
+             'driver': 'ODBC Driver 17 for SQL Server',
+             'MARS_Connection': 'True',
+         }
+     }
+ }
+
 
 
 # Password validation
@@ -121,3 +136,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+STATIC_ROOT = os.path.join (BASE_DIR,'assets')

@@ -5,7 +5,7 @@ from .models import UspsServices
 def hello(request):
 
    #These objects will be created from Database
-   service1 = UspsServices()
+   ''' service1 = UspsServices()
    service1.serviceName = "Freight Auction"
    service1.serviceDescription = "Suppliers have the ability to accept or decline transportation based on a set rate."
    service1.accessFlag = True
@@ -34,7 +34,8 @@ def hello(request):
    service5.serviceDescription = "Supplier has the ability to manage Transportation Visibility &amp; Performance here... (refine description)."
    service5.accessFlag = False
    service5.id = 5
-
-   serviceList = [service1, service2, service3, service4, service5]
+'''
+   serviceList = UspsServices.objects.all()
+   #[service1, service2, service3, service4, service5]
  
    return render(request, 'bpgtemplate.html',{"serviceList":serviceList})

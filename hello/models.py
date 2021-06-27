@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 
-class UspsServices:
-    id : int
-    serviceName : str    
-    serviceDescription : str    
-    accessFlag : bool
+class UspsServices (models.Model):
+#    id : int
+    serviceName = models.CharField(max_length=1000)
+    serviceDescription = models.TextField()    
+    accessFlag = models.BooleanField(default=False)
     
