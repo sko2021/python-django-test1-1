@@ -286,7 +286,7 @@ if(document.getElementById(approvedNum).alt == "image of plus symbol"){
 									
 									
 										<img title="" width="232" height="150"
-											src="https://gateway.usps.com/eAdmin/images/gui/hcs_image.png"
+											src="{% static 'images/hcs_image.png' %}"
 											alt="image of parked postal trucks">
 									
 								
@@ -334,7 +334,7 @@ if(document.getElementById(approvedNum).alt == "image of plus symbol"){
  					
  					<div class = "row">
  						<div class = "col-md-8 col-sm-8 service-font">
- 							<img src="https://gateway.usps.com/eAdmin/images/gui/bkg/icons/plus-grey.png"
+ 							<img src="{% static 'icons/plus-grey.png' %}"
 							 id="{{lst.id}}" tabindex="37{{lst.id}}"
 							onclick="showHideDesc({{lst.id}}, ctx)" alt="image of plus symbol" style="cursor:pointer;">
 							{{lst.serviceName}}&nbsp;&nbsp; 
