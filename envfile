@@ -1,0 +1,47 @@
+[
+  {
+    "name": "BPG_ENVIRONMENT",
+    "value": "DEV",
+    "slotSetting": false
+  },
+  {
+    "name": "BPG_LINKS_DISABLED",
+    "value": "0",
+    "slotSetting": false
+  },
+  {
+    "name": "DJANGO_DEBUG",
+    "value": "1",
+    "slotSetting": false
+  },
+  {
+    "name": "DJANGO_SECRET_KEY",
+    "value": "Abcd432@3#4765191889017%6787676hhjggfabf",
+    "slotSetting": false
+  },
+  {
+    "name": "DJANGO_STATIC_ROOT",
+    "value": "static",
+    "slotSetting": false
+  },
+  {
+    "name": "DJANGO_STATIC_URL",
+    "value": "/static/",
+    "slotSetting": false
+  },
+  {
+    "name": "MICROSOFT_PROVIDER_AUTHENTICATION_SECRET",
+    "value": "~vS.48dgf1~wPhLi4cLJ33dkUW3_VN.7NT",
+    "slotSetting": true
+  },
+  {
+    "name": "SCM_DO_BUILD_DURING_DEPLOYMENT",
+    "value": "1",
+    "slotSetting": false
+  },
+  {
+    "name": "WEBSITE_HTTPLOGGING_RETENTION_DAYS",
+    "value": "10",
+    "slotSetting": false
+  }
+]
